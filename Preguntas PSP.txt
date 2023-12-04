@@ -1,0 +1,51 @@
+PARTE UNO:
+
+1.- Que es el contexto de un proceso y que es el cambio de contexto?
+2.- Que es el cuanto de ejecución? A que tipo de política de planificación pertenece?
+3.- Espacio de memoria
+4.- En un ordenador multinúcleo todos los procesos funcionan a la vez? (tipo test)
+5.- Cúal es el estado anterior a ejecución?
+6.- 
+
+PARTE DOS:
+
+DEFINE MÉTODOS, DE QUE CLASE DESCIENDEN Y LO QUE DEVUELVEN:
+
+start()
+
+getInputStream()
+
+getOutputStream()
+
+waitFor()
+
+
+CORREGIR CÓDIGO:
+
+- ProcessBuilder aleatorios = new ProcessBuilder(args[0]).start(); -> (Process aleatorios = new ProcessBuilder(args[0]).start();)
+
+- BufferedReader brA = new BufferedReader(new InputStreamReader(aleatorios.getOutputStream())); -> (Pone .getOutputStream() pero es .getInputStream())
+
+- PrintStream psA = new PrintStream(aleatorios.getInputStream()); -> (Pone .getInputStream() pero es .getOutputStream())
+
+- Los BufferedReader estaban al revés dentro del while en el .readLine()
+
+
+COMPLETAR CÓDIGO:
+
+- Completar los getInputStream() y getOutputStream()
+
+		BufferedReader brA = new BufferedReader(new InputStreamReader(aleatorios._________) 	-> (.getInputStream())
+
+		PrintStream psA = new PrintStream(aleatorios._________);				-> (.getOutputStream())
+
+- Completar:
+		ProcessBuilder pb= new ProcessBuilder(args[0]);
+		Process aleatorios = _______.start();           					-> (pb)
+
+- Completar los BufferedReader() en el .readLine()
+
+		while ((line = ______.readLine())							-> (in)
+		
+		line = _______.readLine();								-> (br)
+
